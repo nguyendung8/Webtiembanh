@@ -35,7 +35,7 @@
 								<input class="form-control" placeholder="Password" name="password" type="password" value="">
 							</div>
 							<input type="submit" value="Đăng ký" class="btn btn-primary">
-                            <p style="margin-top: 5px">Bạn đã có tài khoản? <a style="text-decoration: none;" href="{{ asset('/') }}">Đăng nhập</a></p>
+                            <p style="margin-top: 5px">Bạn đã có tài khoản? <a style="text-decoration: none;" href="{{ asset('/login') }}">Đăng nhập</a></p>
 						</fieldset>
 					</form>
 				</div>
