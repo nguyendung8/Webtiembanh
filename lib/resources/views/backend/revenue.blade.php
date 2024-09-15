@@ -22,7 +22,11 @@
                         Tổng doanh thu của cửa hàng
                     </div>
                     <p class="revenue">
+                        @if($revenue > 0)
                         Tổng doanh thu: {{ $revenue }}.000.000 đ
+                        @else
+                        Tổng doanh thu: 0 đ
+                        @endif
                     </p>
                 </div>
 			</div>
