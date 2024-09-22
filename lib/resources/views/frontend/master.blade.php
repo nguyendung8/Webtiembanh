@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title> Tuấn Anh Shop - @yield('title')</title>
+	<title> LUXELUSH - @yield('title')</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/home.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -357,13 +357,13 @@
                         </div>
                         <div id="about" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>About us</h3>
-                            <p class="text-justify"> Tuấn Anh Shop thành lập năm 2024. Chúng tôi là cửa hàng bán đèn led uy tín hàng đầu Việt Nam cũng như trên toàn thế giới.</p>
+                            <p class="text-justify"> LUXELUSH thành lập năm 2024. Chúng tôi là cửa hàng bán mỹ phẩm uy tín hàng đầu Việt Nam cũng như trên toàn thế giới.</p>
                         </div>
                         <div id="hotline" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>Hotline</h3>
                             <p>Phone1: (+84) 934155611</p>
                             <p>Phone2: (+84) 523514521</p>
-                            <p>Email: tashop@gmail.com</p>
+                            <p>Email: luxelush@gmail.com</p>
                         </div>
                         <div id="contact" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>Contact Us</h3>

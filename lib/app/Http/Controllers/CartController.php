@@ -67,7 +67,7 @@ class CartController extends Controller
 
             $message->to($email, $name);
 
-            $message->subject('Xác nhận hóa đơn mua hàng Tuấn Anh Shop');
+            $message->subject('Xác nhận hóa đơn mua hàng LUXELUSH');
 
         });
         Cart::destroy();
