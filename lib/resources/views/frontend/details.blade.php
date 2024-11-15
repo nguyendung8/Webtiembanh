@@ -40,6 +40,9 @@
                 </div>
 				<div id="product-details" class="col-xs-12 col-sm-12 col-md-9">
 					<p>Giá: <span class="price">{{ number_format($product->prod_price,0,',','.' )}} VND</span></p>
+					<p>Nhiên liệu: {{ $product->prod_fuel }}</p>
+					<p>Số chỗ ngồi: {{ $product->prod_seat }}</p>
+					<p>Hộp số: {{ $product->prod_gear }}</p>
 					<p>Tình trạng: {{ $product->prod_condition }}</p>
 					<p class="add-cart text-center"><a href="{{ asset('cart/add/' . $product->prod_id) }}">Thêm vào giỏ hàng</a></p>
 				</div>

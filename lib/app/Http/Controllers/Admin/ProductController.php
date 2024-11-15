@@ -34,6 +34,10 @@ class ProductController extends Controller
         $product->prod_slug = Str::slug( $request->product_name);
         $product->prod_img = $filename;
         $product->prod_price = $request->price;
+        $product->prod_fuel = $request->fuel;
+        $product->prod_color = $request->color;
+        $product->prod_gear = $request->gear;
+        $product->prod_seat = $request->seat;
         $product->prod_condition = $request->condition;
         $product->prod_status = $request->status;
         $product->prod_description = $request->description;
@@ -59,6 +63,10 @@ class ProductController extends Controller
         $product->prod_name = $request->product_name;
         $product->prod_slug = Str::slug($request->product_name);
         $product->prod_price = $request->price;
+        $product->prod_fuel = $request->fuel;
+        $product->prod_color = $request->color;
+        $product->prod_gear = $request->gear;
+        $product->prod_seat = $request->seat;
         $product->prod_condition = $request->condition;
         $product->prod_status = 1;
         $product->prod_description = $request->description;

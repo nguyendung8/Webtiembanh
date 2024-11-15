@@ -39,6 +39,22 @@
 										<label>Ảnh sản phẩm</label>
 										<input required id="img" type="file" name="img" class="form-control" >
 									</div>
+                                    <div class="form-group" >
+										<label>Nhiên liệu</label>
+										<input required type="text" name="fuel" class="form-control">
+									</div>
+                                    <div class="form-group" >
+										<label>Màu xe</label>
+										<input required type="text" name="color" class="form-control">
+									</div>
+                                    <div class="form-group" >
+										<label>Hộp số</label>
+										<input required type="text" name="gear" class="form-control">
+									</div>
+                                    <div class="form-group" >
+										<label>Số chỗ ngồi</label>
+										<input required type="number" name="seat" class="form-control">
+									</div>
 									<div class="form-group" >
 										<label>Tình trạng</label>
 										<input required type="text" name="condition" class="form-control">
@@ -51,7 +67,7 @@
 					                    </select>
 									</div>
 									<div class="form-group" >
-										<label>Miêu tả</label>
+										<label>Mô tả</label>
 										<textarea class="ckeditor" required name="description"></textarea>
 									</div>
 									<div class="form-group" >
