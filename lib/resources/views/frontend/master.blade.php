@@ -286,25 +286,19 @@
 
 					<div id="banner-l" class="text-center">
 						<div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner-1.jpg" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner_1.webp" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner-2.webp" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner_2.webp" alt="" class="img-thumbnail"></a>
 						</div>
                         <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner-3.webp" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner_3.webp" alt="" class="img-thumbnail"></a>
 						</div>
                         <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner-4.webp" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner_4.webp" alt="" class="img-thumbnail"></a>
 						</div>
                         <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner-5.webp" alt="" class="img-thumbnail"></a>
-						</div>
-                        <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner-6.webp" alt="" class="img-thumbnail"></a>
-						</div>
-                        <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner-7.webp" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner_5.webp" alt="" class="img-thumbnail"></a>
 						</div>
 					</div>
 				</div>
@@ -324,13 +318,13 @@
 							<!-- The slideshow -->
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide_1.jpg" alt="Banner" >
+									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slider-1.png" alt="Banner" >
 								</div>
 								<div class="carousel-item">
-									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide_2.jpg" alt="Banner">
+									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide-2.png" alt="Banner">
 								</div>
 								<div class="carousel-item">
-									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide.jpg" alt="Banner" >
+									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide-3.png" alt="Banner" >
 								</div>
 							</div>
 
