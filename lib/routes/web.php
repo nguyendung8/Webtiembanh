@@ -154,5 +154,10 @@ Route::group(['namespace' => 'Admin'], function () {
         Route::group(['prefix' => 'revenue'], function (){
             Route::get('/', [RevenueController::class, 'getRevenue']);
         });
+
+        //tax
+        Route::group(['prefix' => 'tax'], function (){
+            Route::get('/', [RevenueController::class, 'getTax']);
+        });
     });
 });

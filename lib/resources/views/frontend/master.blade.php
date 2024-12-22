@@ -218,6 +218,10 @@
             .menu-item a:hover {
                 color: #fff;
             }
+            .product-item img {
+                width: 175px !important;
+                height: 170px !important;
+            }
         </style>
 </head>
 <body>
@@ -370,8 +374,7 @@
                         </div>
                         <div id="contact" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>Contact Us</h3>
-                            <p>Address 1: Số 12/9 - Cầu Giấy - TPHCM</p>
-                            <p>Address 2: Số 401/123 - Xuân Đỉnh - TPHCM</p>
+                            <p>Address : 178 đường Võ Thị Sáu, Phường 8, thành phố Bạc Liêu, tỉnh Bạc Liêu</p>
                         </div>
                     </div>
                 </div>

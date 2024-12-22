@@ -56,6 +56,10 @@
 										<label>Số chỗ ngồi</label>
 										<input required type="number" name="seat" class="form-control" value="{{ $product->prod_seat}}">
 									</div>
+                                    <div class="form-group" >
+										<label>Thuế</label>
+										<input required type="number" name="tax" class="form-control" value="{{ $product->prod_tax}}">
+									</div>
 									<div class="form-group" >
 										<label>Tình trạng</label>
 										<input required type="text" name="condition" class="form-control" value="{{ $product->prod_condition}}">

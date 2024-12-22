@@ -38,6 +38,7 @@ class ProductController extends Controller
         $product->prod_color = $request->color;
         $product->prod_gear = $request->gear;
         $product->prod_seat = $request->seat;
+        $product->prod_tax = $request->tax;
         $product->prod_condition = $request->condition;
         $product->prod_status = $request->status;
         $product->prod_description = $request->description;
@@ -67,6 +68,7 @@ class ProductController extends Controller
         $product->prod_color = $request->color;
         $product->prod_gear = $request->gear;
         $product->prod_seat = $request->seat;
+        $product->prod_tax = $request->tax;
         $product->prod_condition = $request->condition;
         $product->prod_status = 1;
         $product->prod_description = $request->description;
