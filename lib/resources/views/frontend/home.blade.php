@@ -102,30 +102,5 @@
 				@endforeach
 			</div>
 		</div>
-
-        <div class="contact-icon">
-            <i class="fa fa-comments contact-icon" aria-hidden="true"></i>
-        </div>
-        <div class="contact hidden">
-            @include('errors.note')
-            <form method="post">
-                @csrf
-                <h3 class="contact-title">Cảm ơn quý khách đã quan tâm tới  ThuyHang Auto! Xin vui lòng hoàn thành biểu mẫu dưới đây</h3>
-                <i class="fa fa-times close-btn close-contact" aria-hidden="true"></i>
-                <label for="">Họ và tên</label>
-                <div>
-                    <input type="text" name="name" id="" required>
-                </div>
-                <label for="">Số điện thoại <span style="color: red;">*</span></label>
-                <div>
-                    <input type="text" name="phone_number" id="" required>
-                </div>
-                <label for="">Câu hỏi của bạn <span style="color: red;">*</span></label>
-                <div>
-                    <input style="padding: 11px" type="text" name="question" id="" required max="255">
-                </div>
-                <button class="submit-contact-btn close-contact" type="submit">Gửi</button>
-            </form>
-        </div>
 	</div>
 @stop

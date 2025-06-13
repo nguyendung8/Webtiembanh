@@ -2,18 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CustomerCareRequest;
 use App\Models\VpCategory;
 use App\Models\VpComment;
-use App\Models\VpCustomerCare;
-use App\Models\VpFavouriteProduct;
 use App\Models\VpProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
-use App\Models\VpUser;
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
@@ -59,26 +53,5 @@ class FrontendController extends Controller
 
         return view('frontend.search', compact('prod_search', 'keyword'));
     }
-    public function postQuestion(Request $request)
-    {
-        $question = new VpCustomerCare;
 
-        $question->name = $request->name;
-        $question->phone_number = $request->phone_number;
-        $question->question = $request->question;
-        $question->user_id = Auth::id();
-
-        $question->save();
-        return redirect()->intended('/')->with('success', 'Bạn đã thêm câu hỏi thành công!');
-    }
-    public function getListFavorite()
-    {
-        $favoriteProducts = DB::table('vp_favourite_products')
-        ->join('vp_products', 'vp_favourite_products.favou_product', '=', 'vp_products.prod_id')
-        ->where('vp_favourite_products.user_id', '=', Auth::id())
-        ->select('vp_products.*')
-        ->paginate(6);
-
-        return view('frontend.favorites', compact('favoriteProducts'));
-    }
 }

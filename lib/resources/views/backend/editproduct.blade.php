@@ -41,26 +41,6 @@
 					                    <img id="avatar" width="300px" src="{{ asset('lib/storage/app/avatar/'.$product->prod_img) }}">
 									</div>
                                     <div class="form-group" >
-										<label>Nhiên liệu</label>
-										<input required type="text" name="fuel" class="form-control" value="{{ $product->prod_fuel}}">
-									</div>
-                                    <div class="form-group" >
-										<label>Màu xe</label>
-										<input required type="text" name="color" class="form-control" value="{{ $product->prod_color}}">
-									</div>
-                                    <div class="form-group" >
-										<label>Hộp số</label>
-										<input required type="text" name="gear" class="form-control" value="{{ $product->prod_gear}}">
-									</div>
-                                    <div class="form-group" >
-										<label>Số chỗ ngồi</label>
-										<input required type="number" name="seat" class="form-control" value="{{ $product->prod_seat}}">
-									</div>
-                                    <div class="form-group" >
-										<label>Thuế</label>
-										<input required type="number" name="tax" class="form-control" value="{{ $product->prod_tax}}">
-									</div>
-									<div class="form-group" >
 										<label>Tình trạng</label>
 										<input required type="text" name="condition" class="form-control" value="{{ $product->prod_condition}}">
 									</div>

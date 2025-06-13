@@ -5,15 +5,12 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CommentController;
-use App\Http\Controllers\Admin\MessageController;
-use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\RevenueController;
-use App\Http\Controllers\CartController;
 use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\OrderUserController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,13 +36,7 @@ Route::group(['prefix' => '/'], function (){
     //search
     Route::get('/search', [FrontendController::class, 'getSearch']);
 
-    // chăm sóc khách hàng
-    Route::post('/', [FrontendController::class, 'postQuestion'])->middleware('CheckLogedOut');;
 });
-
-//Đăng ký
-Route::get('/register', [RegisterController::class, 'getRegister'])->middleware('CheckLogedIn');
-Route::post('/register', [RegisterController::class, 'postRegister']);
 
 // changepassword
 Route::group(['prefix' => 'change-password','middleware' => 'CheckLogedOut'], function (){
@@ -53,38 +44,9 @@ Route::group(['prefix' => 'change-password','middleware' => 'CheckLogedOut'], fu
     Route::post('/', [PasswordController::class, 'updatePassword']);
 });
 
-// đơn hàng của user
-Route::group(['prefix' => 'list-order','middleware' => 'CheckLogedOut'], function (){
-    Route::get('/', [OrderUserController::class, 'getListOrder']);
-    Route::get('/received/{id}', [OrderUserController::class, 'receivedOrder']);
-});
-
-Route::group(['prefix' => 'list-favorite','middleware' => 'CheckLogedOut'], function (){
-    Route::get('/', [FrontendController::class, 'getListFavorite']);
-});
-
-// giỏ hàng
-Route::group(['prefix' => 'cart'], function (){
-    Route::get('/add/{id}', [CartController::class, 'getAddCart']);
-    Route::get('/show', [CartController::class, 'getShowCart']);
-    Route::get('/delete/{id}', [CartController::class, 'getDeleteCart']);
-    Route::get('/update', [CartController::class, 'getUpdateCart']);
-    Route::post('/show', [CartController::class, 'postPayCart'])->middleware('CheckLogedOut');
-    Route::get('/add_favourite/{id}', [CartController::class, 'addFavourite'])->middleware('CheckLogedOut');
-
-});
-
-//hoàn thành
-Route::get('/complete', [CartController::class, 'getComplete'])->middleware('CheckLogedOut');
-
 
 // Admin
 Route::group(['namespace' => 'Admin'], function () {
-    //login
-    Route::group(['prefix' => '/login', 'middleware' => 'CheckLogedIn'], function (){
-       Route::get('/', [LoginController::class, 'getLogin']);
-       Route::post('/', [LoginController::class, 'postLogin']);
-    });
 
     //logout
     Route::get('/logout', [HomeController::class, 'getLogout']);
@@ -121,21 +83,6 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('/delete/{id}', [ProductController::class, 'getDeleteProduct']);
         });
 
-        //message
-        Route::group(['prefix' => 'message'], function (){
-            Route::get('/', [MessageController::class, 'getMessage']);
-            Route::get('/delete/{id}', [MessageController::class, 'getDeleteMessage']);
-        });
-
-        //order
-        Route::group(['prefix' => 'order'], function (){
-            Route::get('/', [OrderController::class, 'getOrder']);
-            Route::get('/delete/{id}', [OrderController::class, 'getDeleteOrder']);
-            Route::get('/confirm/{id}', [OrderController::class, 'confirmOrder']);
-            Route::get('/transport/{id}', [OrderController::class, 'transportOrder']);
-            Route::get('/detail/{id}', [OrderController::class, 'viewDetailOrder']);
-        });
-
         //account
         Route::group(['prefix' => 'account'], function (){
             Route::get('/', [AccountController::class, 'getAccount']);
@@ -149,15 +96,7 @@ Route::group(['namespace' => 'Admin'], function () {
             // Duyệt bình luận
             Route::get('/confirm-comment/{id}', [CommentController::class, 'confirmComment']);
         });
-
-        //revenue
-        Route::group(['prefix' => 'revenue'], function (){
-            Route::get('/', [RevenueController::class, 'getRevenue']);
-        });
-
-        //tax
-        Route::group(['prefix' => 'tax'], function (){
-            Route::get('/', [RevenueController::class, 'getTax']);
-        });
     });
 });
+
+require __DIR__.'/auth.php';

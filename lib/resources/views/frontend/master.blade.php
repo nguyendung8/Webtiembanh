@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title> ThuyHang Auto - @yield('title')</title>
+	<title> Cake Shop - @yield('title')</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/home.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -236,7 +236,7 @@
 			<div style="flex-wrap: unset !important;" class="row">
 				<div id="logo" class="col-md-3 col-sm-12 col-xs-12">
 					<a style="text-decoration: none;" href="{{ asset('/') }}">
-					    <img style="width: 140px !important; margin-top: 10px;" src="img/home/logo-car.png" alt="">
+					    <img style="width: 80px !important; margin-top: 10px;" src="img/home/cake-logo.png" alt="">
 					</a>
 				</div>
 
@@ -257,8 +257,6 @@
 				<div @if(Auth::check()) class="user icon">
 					<i class="fa fa-user-circle-o" aria-hidden="true"></i>
 					<ul class="subnav">
-                        <li><a style="color: #f53d2d;" href="{{ asset('list-order') }}">Đơn hàng của tôi</a></li>
-                        <li><a style="color: #f53d2d;" href="{{ asset('list-favorite') }}">Sản phẩm yêu thích</a></li>
                         <li><a style="color: #f53d2d;" href="{{ asset('change-password') }}">Đổi mật khẩu</a></li>
                         <li><a style="color: #f53d2d;" href="{{ asset('logout') }}">Đăng xuất</a></li>
 					</ul>
@@ -290,19 +288,13 @@
 
 					<div id="banner-l" class="text-center">
 						<div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner_1.webp" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner-1.webp" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner_2.webp" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner-2.webp" alt="" class="img-thumbnail"></a>
 						</div>
                         <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner_3.webp" alt="" class="img-thumbnail"></a>
-						</div>
-                        <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner_4.webp" alt="" class="img-thumbnail"></a>
-						</div>
-                        <div class="banner-l-item">
-							<a href="{{ asset('/') }}"><img src="img/home/banner_5.webp" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/') }}"><img src="img/home/banner-3.webp" alt="" class="img-thumbnail"></a>
 						</div>
 					</div>
 				</div>
@@ -322,13 +314,13 @@
 							<!-- The slideshow -->
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slider-1.png" alt="Banner" >
+									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide_1.webp" alt="Banner" >
 								</div>
 								<div class="carousel-item">
-									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide-2.png" alt="Banner">
+									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide_2.webp" alt="Banner">
 								</div>
 								<div class="carousel-item">
-									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide-3.png" alt="Banner" >
+									<img style="border-radius: 5px;" width="900px" height="400px" src="img/home/slide_3.webp" alt="Banner" >
 								</div>
 							</div>
 
@@ -359,22 +351,22 @@
                     <div class="row">
                         <div id="logo" class="col-md-3 col-sm-12 col-xs-12">
 							<a style="text-decoration: none;" href="{{ asset('/') }}">
-                                <img style="width: 160px !important;" src="img/home/logo-car.png" alt="">
+                                <img style="width: 100px !important;" src="img/home/cake-logo.png" alt="">
                             </a>
                         </div>
                         <div id="about" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>About us</h3>
-                            <p class="text-justify"> ThuyHang Auto thành lập năm 2024. Chúng tôi là cửa hàng bán ô tô uy tín hàng đầu Việt Nam cũng như trên toàn thế giới.</p>
+                            <p class="text-justify"> Cake Shop thành lập năm 2024. Chúng tôi là cửa hàng bán bánh ngọt uy tín, ngon, chất lượng hàng đầu Việt Nam cũng như trên toàn thế giới.</p>
                         </div>
                         <div id="hotline" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>Hotline</h3>
                             <p>Phone1: (+84) 934155611</p>
                             <p>Phone2: (+84) 523514521</p>
-                            <p>Email: thuyhangauto@gmail.com</p>
+                            <p>Email: cake-shop@gmail.com</p>
                         </div>
                         <div id="contact" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>Contact Us</h3>
-                            <p>Address : 178 đường Võ Thị Sáu, Phường 8, thành phố Bạc Liêu, tỉnh Bạc Liêu</p>
+                            <p>Address : 123 Đường ABC, Quận XYZ, Thành phố ABC</p>
                         </div>
                     </div>
                 </div>
@@ -382,18 +374,5 @@
         </footer>
         <!-- endfooter -->
 
-		<script>
-			var openBtn = document.querySelector('.contact-icon');
-            var closeBtn = document.querySelector('.close-btn');
-            var contactModal = document.querySelector('.contact');
-
-
-            function toggleModal() {
-                contactModal.classList.toggle('hidden');
-            }
-
-            openBtn.addEventListener('click', toggleModal);
-            closeBtn.addEventListener('click', toggleModal);
-		</script>
     </body>
     </html>

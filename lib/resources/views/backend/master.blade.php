@@ -4,7 +4,7 @@
         <base href="{{ asset('public/layout/backend')}}/">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@yield('title') |  ThuyHang Auto</title>
+        <title>@yield('title') | Cake Shop</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/datepicker3.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
@@ -21,7 +21,7 @@
             @endif
             <div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="{{ asset('admin/home') }}"> ThuyHang Auto Admin</a>
+				<a class="navbar-brand" href="{{ asset('admin/home') }}"> Cake Shop Admin</a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> {{ Auth::user()->email }} <span class="caret"></span></a>
@@ -42,11 +42,7 @@
 			<li class="account-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/account') }}"><i style="font-size: 17px; margin-right: 7px;" class="fa fa-users" aria-hidden="true"></i> Người dùng</a></li>
 			<li class="product-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/product') }}"><svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg> Sản phẩm</a></li>
 			<li class="category-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/category') }}"><svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg> Danh mục</a></li>
-			<li class="order-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/order') }}"><i style="font-size: 18px; margin-right: 9px;" class="fa fa-cart-plus" aria-hidden="true"></i> Đơn hàng</a></li>
-			<li class="message-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/message') }}"><svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg> Tin nhắn</a></li>
 			<li class="comment-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/comment') }}"><i style="font-size: 18px; margin-right: 8px;" class="fa fa-pencil-square-o" aria-hidden="true"></i> Bình luận</a></li>
-			<li class="comment-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/revenue') }}"><i style="font-size: 16px; margin-right: 8px;" class="fa fa-money" aria-hidden="true"></i> Doanh thu</a></li>
-			<li class="comment-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/tax') }}"><i style="font-size: 16px; margin-right: 8px;" class="fa fa-money" aria-hidden="true"></i> Thuế</a></li>
             <li role="presentation" class="divider"></li>
 		</ul>
 	</div><!--/.sidebar-->
@@ -58,8 +54,6 @@
 		let home = document.querySelector('.home-btn');
 		let product = document.querySelector('.product-btn');
 		let category = document.querySelector('.category-btn');
-		let message = document.querySelector('.message-btn');
-		let order = document.querySelector('.order-btn');
 		let account = document.querySelector('.account-btn');
 		let comment = document.querySelector('.comment-btn');
 
@@ -71,12 +65,6 @@
 		});
 		category.addEventListener('click', function() {
 			category.classList.add('active');
-		});
-        message.addEventListener('click', function() {
-			message.classList.add('active');
-		});
-        order.addEventListener('click', function() {
-			order.classList.add('active');
 		});
         account.addEventListener('click', function() {
 			account.classList.add('active');
