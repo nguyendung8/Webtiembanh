@@ -258,6 +258,7 @@
 					<i class="fa fa-user-circle-o" aria-hidden="true"></i>
 					<ul class="subnav">
                         <li><a style="color: #f53d2d;" href="{{ asset('change-password') }}">Đổi mật khẩu</a></li>
+                        <li><a style="color: #f53d2d;" href="{{ asset('list-order') }}">Đơn hàng của tôi</a></li>
                         <li><a style="color: #f53d2d;" href="{{ asset('logout') }}">Đăng xuất</a></li>
 					</ul>
                     @endif
